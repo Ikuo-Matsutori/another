@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/")
 class TodoController(@Autowired val todoRepository: TodoRepository) { //TodoControllerクラスの宣言。todoRepositoryという依存性をコンストラクタインジェクションしている。
 
+    @CrossOrigin
     @GetMapping("/todos") //HTTP GETリクエストが/todosに送られたときにこのメソッドが呼び出される。
     fun getTodos(): Array<Todo> { //getTodosメソッド宣言。TODO項目の配列を返す。
         return todoRepository.getTodos() //TodoRepositoryからTODO項目のリストを取得して返す。
