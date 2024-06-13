@@ -42,7 +42,7 @@ class TodoAppApplicationTests(
 
 	@Test
 	fun `GETリクエストはTodoオブジェクトのリストを返す`() {
-		val response = restTemplate.getForEntity("http://localhost:$port/todos", Array<Todo>::class.java)
+		val response = restTemplate.getForEntity("http://localhost:$port/todos", Array<Coins>::class.java)
 //		assertThat(response.headers.contentType, equalTo(PageAttributes.MediaType.APPLICATION_JSON))
 		val todos = response.body!!
 		assertThat(todos.size, equalTo(2))
