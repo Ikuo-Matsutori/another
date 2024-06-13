@@ -1,17 +1,19 @@
 package com.example.todoApp
 
 import org.springframework.beans.factory.annotation.Autowired
-
+import org.springframework.boot.web.client.RestTemplateBuilder
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.http.HttpEntity
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.core.RowMapper
 import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
-
+import org.springframework.web.client.RestTemplate
+import java.io.IOException
+import java.math.BigDecimal
+import java.net.URISyntaxException
 import java.sql.ResultSet
-
-
-
-
 
 
 @Component
@@ -49,6 +51,9 @@ class CoinRepository(
     }
 
 }
+//------------------------------------------------------------------------------------
+
+
 
 
 
