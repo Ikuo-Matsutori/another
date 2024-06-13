@@ -24,37 +24,37 @@ function App() {
     listCreator();
   }, []);
 
-  console.log(list);
+  const postButton = async() => {
 
-  const postButton = () => {
-    fetch("/api/list", {
+     const newItem = {
+         　ticker_symbol: document.querySelector("#ticker-symbol").value,
+           wallet: document.querySelector("#wallet").value,
+           quantity: document.querySelector("#quantity").value,
+           unit_price: document.querySelector("#unit-price").value,
+           total_price: document.querySelector("#total-price").value,
+     };
+
+    await fetch("/api/list", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        ticker_symbol: document.querySelector("#ticker-symbol").value,
-        wallet: document.querySelector("#wallet").value,
-        quantity: document.querySelector("#quantity").value,
-        unit_price: document.querySelector("#unit-price").value,
-        total_price: document.querySelector("#total-price").value,
-      }),
+      body: JSON.stringify(newItem),
     });
-    listCreator();
+    const response = await fetch(`/api/price/${newItem.ticker_symbol}`);
+    const price = await response.json();
+    newItem.current_price = Math.round(price);
+    setList((oldList) => [...oldList, newItem]);
   };
 
-  const deleteButton = (id) => {
-    fetch(`/api/list/${id}`, {
+  const deleteButton = async (id) => {
+    await fetch(`/api/list/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(() =>
-      fetch("/api/list")
-        .then((res) => res.json())
-        .then((data) => setList(data))
-    );
-    listCreator();
+    })
+    setList((oldList) => oldList.filter((item) => item.id !== id));
   };
 
   const totalProfit = list.reduce(
@@ -81,9 +81,9 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>ドッキドキ❤️暗号資産管理</h1>
-      <h1>〜投資に夢見てて草〜</h1>
+    <div className="main">
+      <h1>暗号資産管理シート</h1>
+      <h1>〜目指せ億り人〜</h1>
       <div className="result">
         <p id="total-profit">
           損益計：

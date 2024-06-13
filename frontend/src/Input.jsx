@@ -25,7 +25,7 @@ export default function Input(props) {
         </div>
       </div>
       <button className="input-button" onClick={postButton}>
-        追加しておk
+        追加
       </button>
     </div>
   );

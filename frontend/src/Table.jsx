@@ -44,7 +44,7 @@ export default function Table(props) {
               ) || "Loading..."}
             </td>
             <button onClick={() => deleteButton(obj.id)}>
-              消して大丈夫そ？
+              消去
             </button>
           </tr>
         ))}

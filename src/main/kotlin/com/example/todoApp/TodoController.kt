@@ -30,7 +30,6 @@ class TodoController(@Autowired val coinRepository: CoinRepository) { //TodoCont
 
     @DeleteMapping("/api/list/{id}")
     fun deleteCoin(@PathVariable id: Long): String{
-        //coinRepository.deleteCoin(id)
         return coinRepository.deleteCoin(id)
     }
 }
