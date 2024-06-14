@@ -17,15 +17,16 @@
 
 1. inteliJでファイルを開いてください
 2. frontend ファイルで npm i を実行してください。
-3. psql でローカル環境に db を作成してください。
-4. src/main/resources/application.properties の環境変数を設定してください。
+3. frontend で npm run dev を実行してください。
+4. psql でローカル環境に db を作成してください。
+5. src/main/resources/application.properties の環境変数を設定してください。
    spring.application.name=todoApp
    spring.datasource.url=jdbc:postgresql://localhost/<yout db name>
    spring.datasource.username=user<your user name>
    spring.datasource.password=<your password>
    spring.datasource.driverClassName=org.postgresql.Driver
-5. application/bootRun を実行し、サーバーを立ち上げてください
-6. ブラウザでローカルホストにアクセスしてください　 http://localhost:8080/
+6. application/bootRun を実行し、サーバーを立ち上げてください
+7. ブラウザでローカルホストにアクセスしてください　 http://localhost:8080/
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 使用方法
