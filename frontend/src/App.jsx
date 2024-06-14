@@ -81,7 +81,7 @@ function App() {
   };
 
   return (
-    <div className="main">
+    <div className="main-class">
       <h1>暗号資産管理シート</h1>
       <h1>〜目指せ億り人〜</h1>
       <div className="result">
