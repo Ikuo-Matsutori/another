@@ -43,7 +43,7 @@ export default function Table(props) {
                   100
               ) || "Loading..."}
             </td>
-            <button onClick={() => deleteButton(obj.id)}>
+            <button className="delete" onClick={() => deleteButton(obj.id)}>
               消去
             </button>
           </tr>

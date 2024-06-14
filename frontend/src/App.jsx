@@ -66,17 +66,17 @@ function App() {
     if (profit < 0) {
       return "損してて草";
     } else if (0 < profit && profit <= 10000) {
-      return "やる意味無くて草";
+      return "すばらしい、少し利益が出ています";
     } else if (10000 < profit && profit <= 100000) {
-      return "これぐらいで浮かれてて草";
+      return "すばらしい、この調子でまずは百万円を目指しましょう";
     } else if (100000 < profit && profit <= 1000000) {
-      return "ちょっと儲かってて草";
+      return "すごい、ボーナスぐらいの利益がでています";
     } else if (1000000 < profit && profit <= 10000000) {
-      return "副業レベルで草";
+      return "すばらしい！年収ぐらいの利益が出ています！";
     } else if (10000000 < profit && profit <= 100000000) {
-      return "年収より儲かってて草";
+      return "ここまで来れたあなたは凄い";
     } else if (100000000 < profit) {
-      return "まだ働いてて草";
+      return "おめでとう！目標達成です";
     }
   };
 

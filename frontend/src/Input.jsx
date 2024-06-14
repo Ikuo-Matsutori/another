@@ -1,3 +1,5 @@
+import "./Input.css";
+
 export default function Input(props) {
   const { className, postButton } = props;
   return (
@@ -12,7 +14,7 @@ export default function Input(props) {
           <input id="wallet"></input>
         </div>
         <div className="input">
-          <label htmlFor="quantity">数量</label>
+          <label htmlFor="quantity">数量　　　</label>
           <input id="quantity"></input>
         </div>
         <div className="input">
