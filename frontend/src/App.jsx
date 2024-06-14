@@ -72,9 +72,9 @@ function App() {
     } else if (100000 < profit && profit <= 1000000) {
       return "すごい、ボーナスぐらいの利益がでています";
     } else if (1000000 < profit && profit <= 10000000) {
-      return "すばらしい！年収ぐらいの利益が出ています！";
+      return "すばらしい！目指せ1000万円！";
     } else if (10000000 < profit && profit <= 100000000) {
-      return "ここまで来れたあなたは凄い";
+      return "ここまで来れたあなたは凄い、きっと億り人になれる！";
     } else if (100000000 < profit) {
       return "おめでとう！目標達成です";
     }
@@ -89,7 +89,7 @@ function App() {
           損益計：
           {Math.round(totalProfit) || "Loading..."}円
         </p>
-        <p id="profit-ratio">コメント：{comment(totalProfit)}</p>
+        <p id="profit-ratio">{comment(totalProfit)}</p>
       </div>
       <Input className="input-form" postButton={postButton}></Input>
       <Table list={list} deleteButton={deleteButton}></Table>
